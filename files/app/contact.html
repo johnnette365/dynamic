@@ -1,0 +1,691 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Contact{% endblock title %}
+
+
+    {% comment %} {% block google_analytics %}
+    <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-248379699-1"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+            gtag('js', new Date());
+
+            gtag('config', 'UA-248379699-1');
+        </script>
+    {% endblock google_analytics %} {% endcomment %}
+
+
+
+{% block meta_tags %}
+<meta name="keywords" content="contact, query, queries, global partners, global reach, Address, email, Phone, technical query">
+<meta name="description" content="for business and inquiries, Monday to friday..... ">
+{% endblock meta_tags %}
+
+
+
+{% block head %}
+    <!-- font awesome cdn link -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
+
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- custom css file link -->
+    <link rel="stylesheet" href="{% static 'css/contact.css' %}">
+
+    <!-- to link header footer -->
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous">
+    </script>
+{% endblock head %}
+    
+
+
+{% block page_css %}
+    <style>
+        .global_reach h2 {
+            color: white;
+            font-size: 40px;
+            text-align: center;
+            margin-bottom: 70px;
+        }
+        
+        .global_reach .image_container {
+            position: relative;
+        }
+        
+        .country_name {
+            position: absolute;
+            bottom: 15%;
+            bottom: 0%;
+            left: 0%;
+            padding: 0 10px;
+        }
+        
+        .country_name ul {
+            list-style: none;
+        }
+        
+        .country_name ul li {
+            font-size: 21px;
+            line-height: 45px;
+            color: #f53b41 !important;
+            color: rgb(255, 0, 0) !important;
+        }
+        
+        .country_name2 {
+            display: none;
+        }
+        
+        @media screen and (max-width: 1200px) {
+            .country_name {
+                padding-left: 0;
+                padding-right: 10px;
+            }
+            .country_name ul li {
+                font-size: 17px;
+                line-height: 40px;
+            }
+        }
+        
+        @media screen and (max-width: 900px) {
+            .country_name ul li {
+                line-height: 30px;
+                font-size: 15px;
+            }
+            .global_reach h2 {
+                margin-top: 45px;
+                margin-bottom: 45px !important;
+            }
+        }
+        
+        @media screen and (max-width: 768px) {
+            .country_name {
+                display: none;
+            }
+            .country_name2 {
+                display: block;
+            }
+            .country_name2 {
+                position: static;
+                background-color: white;
+                padding: 0 10px;
+                border-radius: 0px;
+                display: flex;
+                justify-content: center;
+            }
+            .country_name2 .ul1 {
+                padding-top: 10px;
+                padding-right: 100px;
+            }
+            .country_name2 .ul2 {
+                padding-top: 10px;
+                padding-left: 100px;
+            }
+            .country_name2 ul li {
+                line-height: 30px;
+                font-size: 15px;
+                color: #f53b41 !important;
+                color: rgb(255, 0, 0) !important;
+            }
+        }
+        
+        @media screen and (max-width: 430px) {
+            .country_name2 .ul1 {
+                padding-top: 10px;
+                padding-right: 70px;
+            }
+            .country_name2 .ul2 {
+                padding-top: 10px;
+                padding-left: 70px;
+            }
+            .country_name2 ul li {
+                line-height: 30px;
+                font-size: 15px;
+                color: black;
+            }
+        }
+    </style>
+    <style>
+        .glabal_presence {
+            padding: 140px 50px;
+        }
+        
+        .glabal_presence .content h2 {
+            color: white;
+            text-align: center;
+            font-size: 40px;
+            margin-bottom: 70px;
+        }
+        
+        .flag {
+            display: flex;
+            justify-content: center;
+            gap: 15rem;
+        }
+        
+        .flag_image {
+            max-width: 270px;
+        }
+        
+        .flag_content p {
+            color: white;
+            font-size: 16px;
+            letter-spacing: 1px;
+            word-spacing: 3px;
+        }
+        
+        .flag_content p i {
+            color: white;
+            font-size: 15px;
+        }
+        
+        @media screen and (max-width: 1100px) {
+            .flag1,
+            .flag2,
+            .flag3 {
+                width: 200px;
+            }
+            .flag {
+                gap: 10rem;
+            }
+        }
+        
+        @media screen and (max-width: 800px) {
+            .glabal_presence {
+                padding: 120px 20px;
+            }
+            .flag {
+                gap: 5rem;
+            }
+        }
+        
+        @media screen and (max-width: 700px) {
+            .glabal_presence {
+                padding: 90px 20px;
+            }
+            .flag_image {
+                max-width: 400px;
+            }
+            .flag {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                gap: 0;
+            }
+            .flag1,
+            .flag2,
+            .flag3 {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+            }
+            .flag2,
+            .flag3 {
+                margin-top: 50px;
+            }
+        }
+    </style>
+{% endblock page_css %}
+
+
+
+{% block content %}
+    <!--================ banner ================-->
+    <section>
+        <div class="head_banner">
+            <div class="background_img banner img-fluid">
+                <div class="banner_text">
+                    <div>
+                        <h1>CONTACT US</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--========X======== banner ========X========-->
+    <br><br><br>
+
+
+
+    <!--================ contact Information =================-->
+    <section class="contact" id="contact">
+        <div class="content">
+            <h2>Contact Info</h2>
+            <br><br>
+        </div>
+        <div class="containerr">
+            <div class="contactInfo">
+                <br><br>
+                <div class="box">
+                    <div class="icon"><i class="fas fa-map-marker-alt"></i></div>
+                    <div class="text">
+                        <h3>Address</h3>
+                        <p>Johnnette Technologies Pvt Ltd <br> WP-11, Sector 71, Noida,
+                            <br> Gautam Buddha Nagar,<br>Near Sapphire International School <br> Noida - 201301, India</p>
+                    </div>
+                </div>
+                <!-- <div class="box">
+                    <div class="icon"> <i class="fas fa-phone"></i></div>
+                    <div class="text">
+                        <h3>Phone</h3>
+                        <p>+91 7780108418</p>
+                    </div>
+                </div> -->
+                <div class="box">
+                    <div class="icon"><i class="fas fa-envelope"></i></div>
+                    <div class="text">
+                        <h3>Email</h3>
+                        <p style="text-transform: lowercase;">contact@johnnette.com</p>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="contactForm">
+                {% comment %} <form id="my-form" class="contact-form" action="https://formspree.io/f/xpzbkpod" method="POST"> {% endcomment %}
+                <form id="my-form" class="contact-form" action="https://formspree.io/f/xeqdeqyy" method="POST">
+                    <h2>GET IN TOUCH</h2>
+                    <div class="inputBox">
+                        <input type="text" name="Name" required="required">
+                        <span>Full Name</span>
+                    </div>
+                    <div class="inputBox">
+                        <input name="Phone Number" type="text" required="required">
+                        <span>Phone Number</span>
+                    </div>
+                    <div class="inputBox">
+                        <input type="email" name="Email Address" required="required" style="text-transform: lowercase;">
+                        <span>Email</span>
+                    </div>
+                    <!-- <div class="inputBox">
+                        <input type="text" name="What They Want" required="required" style="text-transform: lowercase;">
+                        <span>How can we help you. Write Your Query...</span>
+                    </div> -->
+                    <div class="inputBox">
+                        <textarea name="Message" required="required"></textarea>
+                        <span>How we can help you? </span>
+                    </div>
+                    <div class="input-button">
+                        <button id="my-form-button">Submit</button>
+                    </div>
+                    <p id="my-form-status"></p>
+                </form>
+            </div>
+        </div>
+    </section>
+    <!--========X======== contact Information =========X========-->
+    <!-- <br><br><br> -->
+
+    
+
+    <div class="global-contact" style="background-color: white;">
+        <div class="container" style=" max-width: 1550px; width: 100%;">
+            <div class="card-holder">
+                <div class="card text-bg-secondary india">
+                    <div class="cards-header">
+                        <h2 style="text-align: center;">INDIA</h2>
+                    </div>
+                    <div class="card-body">
+                        <div>
+                            <h3 class="card-title"> <i class="fas fa-map-marker-alt"></i> Address</h3>
+                            <p class="card-text">
+                                Johnnette Technologies Pvt Ltd <br> WP-11, Sector 71, Noida <br>Gautam Bhuddha Nagar, Near<br> Sapphire International School <br> Noida - 201301, India
+                            </p>
+                        </div>
+                        <div>
+                            <!-- <h3 class="card-title">Phone</h3>
+                            <p class="card-text">
+                                <i class="fas fa-phone"></i> +91 7780108418
+                            </p> -->
+                            <h3 class="card-title">Email</h3>
+                            <p class="card-text">
+                                <div>
+                                    <i class="fas fa-envelope"></i>&nbsp; contact@johnnette.com
+                                </div>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="border: 1px solid black;" id="central-border"></div>
+
+                <div class="card text-bg-secondary europe">
+                    <div class="cards-header">
+                        <h2 style="text-align: center;">EUROPE</h2>
+                    </div>
+                    <div class="card-body">
+                        <div>
+                            <h3 class="card-title"> <i class="fas fa-map-marker-alt"></i> Address</h3>
+                            <p class="card-text">
+                                Johnnette Europe <br> Bartovic S.R.O., Šoltésovej 18, <br> 81108 Bratislava, <br> Slovakia, European Union
+                            </p>
+                        </div>
+                        <!-- <div>
+                            <h3 class="card-title">Phone</h3>
+                            <p class="card-text">
+                                <i class="fas fa-phone"></i> +421 903976192 &nbsp; &nbsp; &nbsp;
+                            </p>
+                            <h3 class="card-title">Email</h3>
+                            <p class="card-text">
+                                <i class="fas fa-envelope"></i>&nbsp; abartovic@johnnette.com
+                            </p>
+                        </div> -->
+                    </div>
+                </div>
+
+                <div style="border: 1px solid black;" id="central-border"></div>
+
+                <div class="card text-bg-secondary middle-east">
+                    <div class="cards-header">
+                        <h2 style="text-align: center;">MIDDLE EAST</h2>
+                    </div>
+                    <div class="card-body">
+                        <div>
+                            <h3 class="card-title"> <i class="fas fa-map-marker-alt"></i> Address</h3>
+                            <p class="card-text">
+                                <p>
+                                    C/O Johnnette Middle East 200, <br> Al Saaha C Wing, <br> Downtown Dubai, <br> Near Burj Khalifa, Dubai, UAE
+                                </p>
+                            </p>
+                        </div>
+                        <div>
+                            <h3 class="card-title">Phone</h3>
+                            <p class="card-text">
+                                <i class="fas fa-phone"></i> +91 7780108418
+                            </p>
+                            <h3 class="card-title">Email</h3>
+                            <p class="card-text">
+                                <i class="fas fa-envelope"></i>&nbsp; contact@johnnette.com
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <style>
+        .card-holder,
+        .card,
+        .india .card-header,
+        .india .card-body {
+            border: none !important;
+            background-color: white;
+            padding: 20px 10px;
+        }
+        
+        .india .card-body {
+            padding: 10px 10px;
+        }
+        
+        .europe {
+            padding: 20px 10px!important;
+        }
+        
+        .india {
+            border-right: 2px solid black !important;
+        }
+        
+        .europe {
+            border-left: 2px solid black !important;
+            border-right: 2px solid black !important;
+        }
+        
+        .middle-east {
+            border-left: 2px solid black !important;
+        }
+        
+        .india .card-body,
+        .europe .card-body,
+        .middle-east .card-body {
+            display: flex;
+            justify-content: space-between;
+            gap: 10px;
+        }
+        
+        .global-contact {
+            padding: 0 40px;
+        }
+        
+        .world_map {
+            margin-bottom: 50px
+        }
+        
+        .card-holder {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+        }
+        
+        @media screen and (min-width: 1023px) {
+            .india {
+                border-right: none !important;
+            }
+            .europe {
+                border: none !important;
+                padding: 20px 10px;
+            }
+            .middle-east {
+                border-left: none !important;
+            }
+            .europe {
+                padding: 0 10px;
+            }
+        }
+        
+        @media screen and (max-width: 1023px) {
+            #central-border {
+                display: none;
+            }
+        }
+        
+        @media screen and (min-width: 900px) {
+            .global-contact {
+                margin-bottom: 95px;
+            }
+        }
+        
+        @media screen and (max-width: 1281px) {
+            .contact {
+                margin-bottom: 50px;
+            }
+        }
+        
+        @media screen and (max-width: 1250px) {
+            .india .card-body,
+            .europe .card-body,
+            .middle-east .card-body {
+                flex-flow: wrap;
+                max-width: 250px;
+                padding: 0 20px 20px 20px;
+            }
+        }
+        
+        @media screen and (max-width: 1050px) {
+            .contact {
+                margin-bottom: 50px;
+            }
+        }
+        
+        @media screen and (max-width: 900px) {
+            .india .card-body,
+            .europe .card-body,
+            .middle-east .card-body {
+                flex-flow: nowrap;
+                padding: 0 20px 20px 20px;
+                max-width: 300px;
+            }
+            .card-holder {
+                display: flex;
+                flex-flow: wrap;
+                justify-content: space-between;
+                width: 100%;
+                gap: 20px;
+            }
+        }
+        
+        @media screen and (max-width: 768px) {
+            .india.card,
+            .europe.card,
+            .middle-east.card {
+                margin-bottom: 40px;
+            }
+            .india {
+                padding: 0;
+                border-right: none !important;
+                border-bottom: 2px solid black !important;
+            }
+            .europe {
+                padding: 0;
+                border-right: none !important;
+                border-left: none !important;
+                border-top: 2px solid black !important;
+                border-bottom: 2px solid black !important;
+            }
+            .middle-east {
+                padding: 0;
+                border-left: none !important;
+                border-top: 2px solid black !important;
+            }
+        }
+        
+        @media screen and (max-width: 760px) {
+            .card-holder {
+                justify-content: center;
+            }
+            .india.card,
+            .europe.card,
+            .middle-east.card {
+                max-width: 100%;
+                width: 100%;
+            }
+            .india .card-body,
+            .europe .card-body,
+            .middle-east .card-body {
+                display: flex;
+                max-width: 100%;
+                width: 100%;
+            }
+        }
+        
+        @media screen and (max-width: 540px) {
+            .contact {
+                margin-bottom: 10px
+            }
+            .world_map {
+                margin-bottom: 50px;
+            }
+        }
+        
+        @media screen and (max-width: 450px) {
+            .global-contact {
+                padding: 0 20px;
+            }
+            .global-contact .container {
+                padding-left: 0;
+                padding-right: 0;
+            }
+            .contact {
+                margin-bottom: 40px;
+            }
+            .world_map {
+                margin-bottom: 40px
+            }
+        }
+    </style>
+
+
+
+    <!--================ Our Global Reach =================-->
+    <section class="world_map" id="global_reach">
+        <div class="global_reach">
+            <h2>Our Global Reach</h2>
+            <div class="image_container">
+                <img src="{% static 'img/contact/MapChart_Map.png' %}" style="width: 100%;" width="100%" class="img-fluid" alt="Johnnette Technologies global reachs">
+                <div class="country_name">
+                    <ul style="list-style: none; color: back;">
+                        <li>
+                            India
+                        </li>
+                        <li>
+                            Saudi Arabia
+                        </li>
+                        <li>
+                            UAE
+                        </li>
+                        <!-- <li>
+                            Bangladesh
+                        </li> -->
+                        <!-- <li>
+                            Indonesia
+                        </li> -->
+                        <li>
+                            Malaysia
+                        </li>
+                        <!-- <li>
+                            Sri Lanka
+                        </li> -->
+                        <li>
+                            Ghana
+                        </li>
+                        <li>
+                            Ethiopia
+                        </li>
+                        <li>
+                            Slovakia
+                        </li>
+                    </ul>
+                </div>
+                <div class="country_name2">
+                    <ul class="ul1">
+                        <li>
+                            India
+                        </li>
+                        <li>
+                            Saudi Arabia
+                        </li>
+                        <li>
+                            UAE
+                        </li>
+                        <!-- <li>
+                            Bangladesh
+                        </li> -->
+                        <!-- <li>
+                            Indonesia
+                        </li> -->
+                        <li>
+                            Malaysia
+                        </li>
+                    </ul>
+                    <ul class="ul2">
+
+                        <!-- <li>
+                            Sri Lanka
+                        </li> -->
+                        <li>
+                            Ghana
+                        </li>
+                        <li>
+                            Ethiopia
+                        </li>
+                        <li>
+                            Slovakia
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--========X======== Our Global Reach =========X========-->
+{% endblock content %}
+
+
+
+{% block page_js %}
+{% endblock page_js %}

@@ -1,0 +1,1325 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}News and Media{% endblock title %}
+
+
+{% comment %} {% block google_analytics %}
+ <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-248379699-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-248379699-1');
+    </script>
+{% endblock google_analytics %} {% endcomment %}
+
+
+
+{% block meta_tags %}
+<meta name="keywords" content="news and media, johnnette technologies, johnnette nuws, news about johnnette technologies">
+<meta name="description" content="One of the Indian Defence units procures a few sets of multi rotor drones from Johnnette Technologies, An Indian Drone manufacturer. Johnnette Technologies has....">
+{% endblock meta_tags %}
+
+
+
+{% block head %}
+    <!-- font awesome cdn link -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
+
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- custom css file link -->
+    <link rel="stylesheet" href="{% static 'css/news.css' %}">
+
+    <!-- to link header footer -->
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous">
+    </script>
+{% endblock head %}
+    
+
+
+{% block page_css %}
+    <!-- Global css for whole page -->
+    <style>
+        /* ----------------============= banner ===============-------------------- */
+        
+        .banner-container {
+            min-height: 100vh;
+            height: 50vh;
+            background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url({% static 'img/news/banner5.png' %}) center /cover no-repeat;
+            position: fixed;
+            display: flex;
+            flex-direction: column;
+            justify-content: stretch;
+            width: 100%;
+            z-index: -33;
+        }
+        
+        .banner {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            z-index: -33;
+        }
+        
+        .banner-title {
+            font-size: 3rem;
+            line-height: 1.2;
+            z-index: -33;
+        }
+        
+        .banner-title span {
+            color: white;
+            z-index: -33;
+        }
+        
+        .banner p {
+            padding: 1rem 0 2rem 0;
+            font-size: 1.2rem;
+            text-transform: capitalize;
+            font-weight: 300;
+            word-spacing: 2px;
+            z-index: -33;
+        }
+        
+        .banner1 {
+            display: none;
+        }
+        
+        @media screen and (max-width: 1100px) {
+            .banner1 {
+                display: block;
+            }
+            .banner2 {
+                display: none;
+            }
+        }
+    </style>
+{% endblock page_css %}
+
+
+
+{% block content %}
+    <!--================ banner ================-->
+    <div class="banner1" style="max-width: 115rem; background-image: url(img/news/banner3.webp); background-repeat: no-repeat; background-size: contain; background-size: cover; position: relative; width: 100%; opacity: .4;">
+        <img src="{% static 'img/news/banner3.webp' %}" width="100%" alt="blog about johnnette technologies" style="visibility: hidden; position: relative;">
+    </div>
+
+    <div class="banner2">
+        <div class="banner-container">
+            <div class="banner">
+                <div class="container">
+                </div>
+            </div>
+        </div>
+        <img src="{% static 'img/news/banner3.webp' %}" width="100%" alt="blog about johnnette technologies" style="visibility: hidden;">
+    </div>
+    <!--========X======== banner ========X========-->
+
+
+    <div style="background-color: black;">
+        <!--==================== main content ====================-->
+        <div class="content">
+            <h2>News and Media</h2>
+        </div>
+
+        <section class="media">
+            <div class="containerr">
+                <div class="mediaInfo">
+                    <div class="news_logo" style="width: 120%;">
+                        <img src="{% static 'img/news/indian_defence.png' %}" class="img-fluid" alt="tv9">
+                    </div>
+                    <div class="box">
+                        <div class="text">
+                            <h3>Johnnette Technologies offers to develop JF-5 HALE UCAV for the Indian Military</h3>
+                            <p>
+                                Noida-based Johnnette Technologies, a successful bootstrapped Indian UAV manufacturer, Johnnette JF-5 is a High Altitude Long Endurance strategic Unmanned Combat Aerial Vehicle capable of conducting operations that are performed with fighter jets.
+                                <br><br>
+                                <a href="https://idrw.org/johnnette-technologies-offers-to-develop-jf-5-hale-ucav-for-the-indian-military/" target="_blank" style="text-decoration: none;">
+                                    <button style="padding: 7px 10px; border-radius: 5px; color: black;">Click to know more</button>
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="media_image">
+                    <a href="https://idrw.org/johnnette-technologies-offers-to-develop-jf-5-hale-ucav-for-the-indian-military/" target="_blank">
+                        <img src="{% static 'img/news/jf5-render.jpg' %}" width="80%" class="img-fluid" alt="drone-mohotashav">
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="media">
+            <div class="containerr">
+                <div class="mediaInfo">
+                    <div class="news_logo" style="width: 150%;">
+                        <img src="{% static 'img/news/idn.png' %}" class="img-fluid" alt="tv9">
+                    </div>
+                    <div class="box">
+                        <div class="text">
+                            <h3>PRIVATE FIRM JOHNNETTE DEVELOPING HALE UCAV</h3>
+                            <p>
+                                Indian Private Firm Johnnette is developing JF-5 HALE UCAV. It uses Turboprop Engine, Max Flight altitude -40000Ft, Weight -5,600 kg, Can carry a wide variety of Sensors & missiles/weapons. range - 8,500 km, Can operate in -30 to +55 degree Celsius reports
+                                Varun K on his Twitter handle.
+                                <br><br>
+                                <a href="http://www.indiandefensenews.in/2022/10/private-firm-johnnette-developing-hale.html?m=1" target="_blank" style="text-decoration: none;">
+                                    <button style="padding: 7px 10px; border-radius: 5px; color: black;">Click to know more</button>
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="media_image">
+                    <a href="http://www.indiandefensenews.in/2022/10/private-firm-johnnette-developing-hale.html?m=1" target="_blank">
+                        <img src="{% static 'img/news/idn-jf5.png' %}" width="80%" class="img-fluid" alt="drone-mohotashav">
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="media">
+            <div class="containerr">
+                <div class="mediaInfo">
+                    <div class="news_logo" style="width: 60%; padding-top: 30px;">
+                        <img src="{% static 'img/news/10sideinfo.png' %}" class="img-fluid" alt="10sideinfo">
+                    </div>
+                    <div class="box">
+                        <div class="text">
+                            <h3>
+                                Johnnette Technologies JF-5 HALE UCAV For India | DRDO vs Adani vs Johnnette
+                            </h3><br>
+                            <p>
+                                <br>
+                                <a href="https://www.youtube.com/watch?v=qJDai6wpPw4" target="_blank" style="text-decoration: none;">
+                                    <button style="padding: 7px 10px; border-radius: 5px; color: black;">Click to know more</button>
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="media_image">
+                    <iframe width="80%" height="100%" src="https://www.youtube.com/embed/qJDai6wpPw4">
+                </iframe>
+                </div>
+            </div>
+        </section>
+
+        <section class="media">
+            <div class="containerr">
+                <div class="mediaInfo">
+                    <div class="news_logo" style="width: 150%;">
+                        <img src="{% static 'img/news/igmp.jpg' %}" class="img-fluid" alt="igmp">
+                    </div>
+                    <div class="box">
+                        <div class="text">
+                            <h3>Indian Pvt Defence firm Johnnette Technologies developing JF-5 HALE UCAV</h3>
+                            <p>
+                                Indian drone manufacturer Johnnette Technologies is developing a High Altitude Long Endurance (HALE) strategic Unmanned Combat Aerial Vehicle (UCAV) known as JF-5 that is capable of conducting wide area surveillance, time-sensitive strike missions over
+                                land and sea and a host of other challenging military missions that a fighter jet can conduct.
+                                <br><br>
+                                <a href="https://www.theigmp.org/2022/10/indian-pvt-defence-firm-johnnette-technologies-developing-jf-5-hale-ucav.html?m=1" target="_blank" style="text-decoration: none;">
+                                    <button style="padding: 7px 10px; border-radius: 5px; color: black;">Click to know more</button>
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="media_image">
+                    <a href="https://www.theigmp.org/2022/10/indian-pvt-defence-firm-johnnette-technologies-developing-jf-5-hale-ucav.html?m=1" target="_blank">
+                        <img src="{% static 'img/news/igmp-jf5.png' %}" width="80%" class="img-fluid" alt="drone-mohotashav">
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="media">
+            <div class="containerr">
+                <div class="mediaInfo">
+                    <div class="news_logo" style="width: 150%;">
+                        <img src="{% static 'img/news/national-defence.jpg' %}" class="img-fluid" alt="tv9">
+                    </div>
+                    <div class="box">
+                        <div class="text">
+                            <p>
+                                Our Head of Sales Mr. <strong>Abhinav Varrey</strong> gave an informative interview on how events like the <strong>SWAVALAMBAN</strong> Seminar which was organized by the Indian Navy to boost the progress of indigenization
+                                of defence products. He also spoke briefly about our products Johnnette JF-2 and Johnnette JM-2 giving our clients a brief insight into our solutions.
+                                <br><br>
+                                <a href="https://www.youtube.com/watch?v=7tzugefmdRI" target="_blank" style="text-decoration: none;">
+                                    <button style="padding: 7px 10px; border-radius: 5px; color: black;">Click to know more</button>
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="media_image">
+                    <a href="https://www.youtube.com/watch?v=7tzugefmdRI" target="_blank">
+                        <img src="{% static 'img/news/navy-seminar.png' %}" width="80%" class="img-fluid" alt="drone-mohotashav">
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="media">
+            <div class="containerr">
+                <div class="mediaInfo">
+                    <div class="news_logo" style="width: 150%;">
+                        <img src="{% static 'img/news/tv9.png' %}" class="img-fluid" alt="tv9">
+                    </div>
+                    <div class="box">
+                        <div class="text">
+                            <p>
+                                On the occasion of Bharat Drone Mahotsav, <strong>Abhinav Varrey</strong> our Head of Sales & Communication and <strong>Akshat Rai</strong> - Associate Sales & communication were invited by <strong>Associated Broadcasting Co. Pvt Ltd (TV9)</strong>                                to share their expert views on the rapid growth of the Indian Drone Ecosystem. We strongly believe in the vision of our Honorable Prime Minister Shri @Narendra Modi that India will become a global Drone hub by 2030.
+                                <br><br>
+                                <a href="https://www.linkedin.com/posts/johnnette-technologies_dronemahotsav-drones-india-activity-6936292712845312000-dZv7?utm_source=linkedin_share&utm_medium=member_desktop_web" target="_blank" style="text-decoration: none;">
+                                    <button style="padding: 7px 10px; border-radius: 5px; color: black;">Click to know more</button>
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="media_image">
+                    <a href="https://www.linkedin.com/posts/johnnette-technologies_dronemahotsav-drones-india-activity-6936292712845312000-dZv7?utm_source=linkedin_share&utm_medium=member_desktop_web" target="_blank">
+                        <img src="{% static 'img/news/drone-mohotshav.png' %}" width="80%" class="img-fluid" alt="drone-mohotashav">
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="media">
+            <div class="containerr">
+                <div class="mediaInfo">
+                    <div class="news_logo" style="width: 100%;">
+                        <img src="{% static 'img/news/sUAS-News.png' %}" class="img-fluid" alt="Indian Drone Manufacturer, Johnnette Technologies raises close to a Million dollars in
+                    Pre-Series A round from Hardcastle Petrofer">
+                    </div>
+                    <div class="box">
+                        <div class="text">
+                            <h3>Indian Drone Manufacturer, Johnnette Technologies raises close to a Million dollars in Pre-Series A round from Hardcastle Petrofer</h3><br>
+                            <p>Johnnette Technologies, an Indian Drone manufacturer and the parent company of Indian Institute of Drones, the no. 1 Drone pilot training school in India raises close to a million dollars in Pre-Series A round from Hardcastle
+                                Petrofer, a leading Indian manufacturer of industrial oils.
+                                <br><br>
+                                <a href="https://www.suasnews.com/2021/12/indian-drone-manufacturer-johnnette-technologies-raises-close-to-a-million-dollars-in-pre-series-a-round-from-hardcastle-petrofer/#" target="_blank" style="text-decoration: none;">
+                                    <button style="padding: 7px 10px; border-radius: 5px; color: black;">Click to know more</button>
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="media_image">
+                    <a href="https://www.suasnews.com/2021/12/indian-drone-manufacturer-johnnette-technologies-raises-close-to-a-million-dollars-in-pre-series-a-round-from-hardcastle-petrofer/#" target="_blank">
+                        <img src="{% static 'img/news/news2.png' %}" width="80%" class="img-fluid" alt="Indian Drone Manufacturer, Johnnette Technologies raises close to a Million dollars in
+                    Pre-Series A round from Hardcastle Petrofer">
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="media">
+            <div class="containerr">
+                <div class="mediaInfo">
+                    <div class="news_logo" style="width: 100%; padding-top: 40px;">
+                        <img src="{% static 'img/news/strategicaffairs.png' %}" width="90%" class="img-fluid" alt="Indian Drone Company signs MoU with Ghanian Company to start drone pilot training and drone manufacturing in Ghana - The Business of Drones">
+                    </div>
+                    <div class="box">
+                        <div class="text">
+                            <h3>
+                                Indian Drone Company signs MoU with Ghanian Company to start drone pilot training and drone manufacturing in Ghana - The Business of Drones
+                            </h3><br>
+                            <p>Johnnette Technologies, an Indian Drone manufacturer and the parent company of Indian Institute of Drones, the no. 1 Drone pilot training school in India signs a MoU with a Ghanian company to setup a Drone Pilot training and
+                                Manufacturing company in Ghana.
+                                <br><br>
+                                <a href="https://strategicaffairsindia.in/indian-drone-company-ghanian-company-signs-mou-to-start-drone-pilot-training-drone-manufacturing-in-ghana/" target="_blank" style="text-decoration: none;">
+                                    <button style="padding: 7px 10px; border-radius: 5px; color: black;">Click to know
+                                    more</button>
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="media_image">
+                    <a href="https://strategicaffairsindia.in/indian-drone-company-ghanian-company-signs-mou-to-start-drone-pilot-training-drone-manufacturing-in-ghana/" target="_blank">
+                        <img src="{% static 'img/news/strategicaffairs.png' %}" width="80%" class="img-fluid" alt="Indian Drone Company signs MoU with Ghanian Company to start drone pilot training and drone manufacturing in Ghana - The Business of Drones">
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="media">
+            <div class="containerr">
+                <div class="mediaInfo">
+                    <div class="news_logo" style="width: 100%; padding-top: 30px;">
+                        <img src="{% static 'img/news/opera-news.png' %}" class="img-fluid" alt="ndian Drone Company signs MoU with Ghanian Company to start drone pilot training and drone manufacturing in Ghana - The Business of Drones">
+                    </div>
+                    <div class="box">
+                        <div class="text">
+                            <h3>
+                                Indian Drone Company signs MoU with Ghanian Company to start drone pilot training and drone manufacturing in Ghana - The Business of Drones
+                            </h3><br>
+                            <p>
+                                Johnnette Technologies, an Indian Drone manufacturer and the parent company of Indian Institute of Drones, the no. 1 Drone pilot training school in India signs a MoU with a Ghanian company to setup a Drone Pilot training and Manufacturing company in Ghana.
+                                <br><br>
+                                <a href="https://www.dailyadvent.com/news/c63aaa203eeb71d2996da31c74aca232-Indian-Drone-Company-signs-MoU-with-Ghanian-Company-to-start-drone-pilot-training-and-drone-manufacturing-in-Ghana--The-Business-of-Drones" target="_blank" style="text-decoration: none;">
+                                    <button style="padding: 7px 10px; border-radius: 5px; color: black;">Click to know
+                                    more</button>
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="media_image">
+                    <a href="https://www.dailyadvent.com/news/c63aaa203eeb71d2996da31c74aca232-Indian-Drone-Company-signs-MoU-with-Ghanian-Company-to-start-drone-pilot-training-and-drone-manufacturing-in-Ghana--The-Business-of-Drones" target="_blank">
+                        <img src="{% static 'img/news/news4.jpg' %}" class="img-fluid" width="80%" alt="ndian Drone Company signs MoU with Ghanian Company to start drone pilot training and drone
+                    manufacturing in Ghana - The Business of Drones">
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="media">
+            <div class="containerr">
+                <div class="mediaInfo">
+                    <div class="news_logo" style="width: 100%; padding-top: 30px;">
+                        <img src="{% static 'img/news/NewsBreak.png' %}" class="img-fluid" alt="Indian Drone Company signs MoU with Ghanian Company to start Drone Pilot Training and Drone Manufacturing in Ghana">
+                    </div>
+                    <div class="box">
+                        <div class="text">
+                            <h3>
+                                Indian Drone Company signs MoU with Ghanian Company to start Drone Pilot Training and Drone Manufacturing in Ghana
+                            </h3><br>
+                            <p>
+                                Johnnette Technologies, an Indian Drone manufacturer and the parent company of Indian Institute of Drones, the no. 1 Drone pilot training school in India signs a MoU with a Ghanian company to setup a Drone Pilot training and Manufacturing company in Ghana.
+                                <br><br>
+                                <a href="https://www.newsbreak.com/news/2383514321328/indian-drone-company-signs-mou-with-ghanian-company-to-start-drone-pilot-training-and-drone-manufacturing-in-ghana" target="_blank" style="text-decoration: none;">
+                                    <button style="padding: 7px 10px; border-radius: 5px; color: black;">Click to know
+                                    more</button>
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="media_image">
+                    <a href="https://www.newsbreak.com/news/2383514321328/indian-drone-company-signs-mou-with-ghanian-company-to-start-drone-pilot-training-and-drone-manufacturing-in-ghana" target="_blank">
+                        <img src="{% static 'img/news/news5.jpg' %}" class="img-fluid" width="80%" alt="Indian Drone Company signs MoU with Ghanian Company to start Drone Pilot Training and Drone
+                    Manufacturing in Ghana">
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="media">
+            <div class="containerr">
+                <div class="mediaInfo">
+                    <div class="news_logo" style="width: 100%; padding-top: 10px;">
+                        <img src="{% static 'img/news/sUAS-News.png' %}" class="img-fluid" alt="Indian Drone Company signs MoU with Ghanian Company to start Drone Pilot Training and Drone Manufacturing in Ghana">
+                    </div>
+                    <div class="box">
+                        <div class="text">
+                            <h3>
+                                Indian Drone Company signs MoU with Ghanian Company to start Drone Pilot Training and Drone Manufacturing in Ghana
+                            </h3><br>
+                            <p>
+                                Drones have been the latest buzz around the globe because of its ever-increasing usage in different industries and its immense potential to be leveraged to create jobs and impact the economy of any country that adopts this technology.
+                                <br><br>
+                                <a href="https://www.suasnews.com/2021/09/indian-drone-company-signs-mou-with-ghanian-company-to-start-drone-pilot-training-and-drone-manufacturing-in-ghana/" target="_blank" style="text-decoration: none;">
+                                    <button style="padding: 7px 10px; border-radius: 5px; color: black;">Click to know
+                                    more</button>
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="media_image">
+                    <a href="https://www.suasnews.com/2021/09/indian-drone-company-signs-mou-with-ghanian-company-to-start-drone-pilot-training-and-drone-manufacturing-in-ghana/" target="_blank">
+                        <img src="{% static 'img/news/news6.jpg' %}" width="80%" class="img-fluid" alt="Indian Drone Company signs MoU with Ghanian Company to start Drone Pilot Training and Drone
+                    Manufacturing in Ghana">
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="media">
+            <div class="containerr">
+                <div class="mediaInfo">
+                    <div class="news_logo" style="width: 100%; padding-top: 30px;">
+                        <img src="{% static 'img/news/raksha.png' %}" class="img-fluid" alt="Indian Drone Company signs MoU with Ghanian Company to start Drone Pilot Training and Drone Manufacturing in Ghana.">
+                    </div>
+                    <div class="box">
+                        <div class="text">
+                            <h3>
+                                Indian Drone Company signs MoU with Ghanian Company to start Drone Pilot Training and Drone Manufacturing in Ghana.
+                            </h3><br>
+                            <p>
+                                Johnnette Technologies, an Indian Drone manufacturer and the parent company of Indian Institute of Drones, the no. 1 Drone pilot training school in India signs a MoU with a Ghanian company to setup a Drone Pilot training and Manufacturing company in Ghana.
+                                <br><br>
+                                <a href="https://raksha-anirveda.com/indian-drone-company-signs-mou-with-ghanian-company-to-start-drone-pilot-training-and-drone-manufacturing-in-ghana/" target="_blank" style="text-decoration: none;">
+                                    <button style="padding: 7px 10px; border-radius: 5px; color: black;">Click to know more</button>
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="media_image">
+                    <a href="https://raksha-anirveda.com/indian-drone-company-signs-mou-with-ghanian-company-to-start-drone-pilot-training-and-drone-manufacturing-in-ghana/" target="_blank">
+                        <img src="{% static 'img/news/news7.png' %}" width="80%" class="img-fluid" alt="Indian Drone Company signs MoU with Ghanian Company to start Drone Pilot Training and Drone
+                    Manufacturing in Ghana.">
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="media">
+            <div class="containerr">
+                <div class="mediaInfo">
+                    <div class="news_logo" style="width: 100%; padding-top: 40px;">
+                        <img src="{% static 'img/news/geospatial-world-bloc (2).png' %}" width="90%" class="img-fluid" alt="Indian drone company signs MoU with Ghanian company to start drone pilot training and drone manufacturing in Ghana.">
+                    </div>
+                    <div class="box">
+                        <div class="text">
+                            <h3>
+                                Indian drone company signs MoU with Ghanian company to start drone pilot training and drone manufacturing in Ghana.
+                            </h3><br>
+                            <p>
+                                Johnnette Technologies, an Indian Drone manufacturer and the parent company of Indian Institute of Drones, the no. 1 Drone pilot training school in India signs a MoU with a Ghanian company to setup a Drone Pilot training and Manufacturing company in Ghana.
+                                <br><br>
+                                <a href="https://www.geospatialworld.net/news/indian-drone-company-signs-mou-with-ghanian-company-to-start-drone-pilot-training-and-drone-manufacturing-in-ghana/" target="_blank" style="text-decoration: none;">
+                                    <button style="padding: 7px 10px; border-radius: 5px; color: black;">Click to know more</button>
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="media_image">
+                    <a href="https://www.geospatialworld.net/news/indian-drone-company-signs-mou-with-ghanian-company-to-start-drone-pilot-training-and-drone-manufacturing-in-ghana/" target="_blank">
+                        <img src="{% static 'img/news/geospatial-world-bloc (2).png' %}" class="img-fluid" width="80%" alt="Indian drone company signs MoU with Ghanian company to start drone pilot training and drone manufacturing in Ghana.">
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="media">
+            <div class="containerr">
+                <div class="mediaInfo">
+                    <div class="news_logo" style="width: 100%; padding-top: 30px;">
+                        <img src="{% static 'img/news/The-Week-Logo.png' %}" class="img-fluid" alt="ur CEO Lt Cdr John Livingstone shares his views on the Latest Drone Rules released by the Ministry of Civil Aviation.">
+                    </div>
+                    <div class="box">
+                        <div class="text">
+                            <h3>
+                                Civilian drones: New laws could drive rapid growth in domestic market.
+                            </h3><br>
+                            <p>
+                                Your food is in the air! In the not so distant future, this could be Swiggy’s notification to customers. In May, the ministry of civil aviation cleared 20 entities to conduct experimental beyond-visual-line-of-sight (BVLOS) drone flights.
+                                <br><br>
+                                <a href="https://www.theweek.in/theweek/current/2021/09/23/civilian-drones-new-laws-could-drive-rapid-growth-in-domestic-market.amp.html" target="_blank" style="text-decoration: none;">
+                                    <button style="padding: 7px 10px; border-radius: 5px; color: black;">Click to know more</button>
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="media_image">
+                    <a href="https://www.theweek.in/theweek/current/2021/09/23/civilian-drones-new-laws-could-drive-rapid-growth-in-domestic-market.amp.html" target="_blank">
+                        <img src="{% static 'img/news/medical_drone.jpg' %}" width="80%" class="img-fluid" alt="ivilian drones: New laws could drive rapid growth in domestic market.">
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="media">
+            <div class="containerr">
+                <div class="mediaInfo">
+                    <div class="news_logo" style="width: 60%; padding-top: 30px;">
+                        <img src="{% static 'img/news/zeebusiness.png' %}" class="img-fluid" alt="ur CEO Lt Cdr John Livingstone shares his views on the Latest Drone Rules released by the Ministry of Civil Aviation.">
+                    </div>
+                    <div class="box">
+                        <div class="text">
+                            <h3>
+                                Our CEO Lt Cdr John Livingstone shares his views on the Latest Drone Rules released by the Ministry of Civil Aviation.
+                            </h3><br>
+                            <p>
+                                <br>
+                                <a href="https://www.youtube.com/watch?v=H7L4jGnJDFQ" target="_blank" style="text-decoration: none;">
+                                    <button style="padding: 7px 10px; border-radius: 5px; color: black;">Click to know more</button>
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="media_image">
+                    <iframe width="80%" height="100%" src="https://www.youtube.com/embed/H7L4jGnJDFQ">
+                </iframe>
+                </div>
+            </div>
+        </section>
+
+        <section class="media">
+            <div class="containerr">
+                <div class="mediaInfo">
+                    <div class="news_logo" style="width: 90%; padding-top: 30px;">
+                        <img src="{% static 'img/news/the_print.png' %}" class="img-fluid" alt="Why India’s drone market could become a multi-billion-dollar industry in next decade.">
+                    </div>
+                    <div class="box">
+                        <div class="text">
+                            <h3>
+                                Why India’s drone market could become a multi-billion-dollar industry in next decade.
+                            </h3><br>
+                            <p>
+                                The Indian drone market is expected to reach $1.21 billion in 2021, and 2022 will be the year the country will witness widespread usage of drones. <br> According to global market intelligence and advisory firm BIS Research,
+                                the global drone market, which is currently dominated by US, China and Israel, will touch $28.47 billion this year and India will comprise about 4.25 per cent of that.
+                                <br><br>
+                                <a href="https://theprint.in/india/governance/why-indias-drone-market-could-become-a-multi-billion-dollar-industry-in-next-decade/700817/" target="_blank" style="text-decoration: none;">
+                                    <button style="padding: 7px 10px; border-radius: 5px; color: black;">Click to know more</button>
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="media_image">
+                    <a href="https://theprint.in/india/governance/why-indias-drone-market-could-become-a-multi-billion-dollar-industry-in-next-decade/700817/" target="_blank">
+                        <img src="{% static 'img/news/news11.avif' %}" width="80%" class="img-fluid" alt="Why India’s drone market could become a multi-billion-dollar industry in next decade.">
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="media">
+            <div class="containerr">
+                <div class="mediaInfo">
+                    <div class="news_logo" style="width: 130%; padding-top: 30px;">
+                        <img src="{% static 'img/news/geospatial-world-bloc (2).png' %}" width="100%" class="img-fluid" alt="Instructors from Indian Institute of Drones and Pioneer Flying Academy successfully complete DGCA approved RPAS Trainer Course">
+                    </div>
+                    <div class="box">
+                        <div class="text">
+                            <h3>
+                                Instructors from Indian Institute of Drones and Pioneer Flying Academy successfully complete DGCA approved RPAS Trainer Course
+                            </h3><br>
+                            <p>
+                                With an increasing demand of drone operators and their operational readiness in various fields such as Agriculture, Security and Surveillance, Aerial Mapping, Disaster Management, Industrial Inspection, Health care and Law enforcement the government of
+                                India is pushing the local manufactures to increase production of drones and comprehensive training of drone pilots.
+                                <br><br>
+                                <a href="https://www.geospatialworld.net/news/instructors-from-indian-institute-of-drones-and-pioneer-flying-academy-successfully-complete-dgca-approved-rpas-trainer-course/" target="_blank" style="text-decoration: none;">
+                                    <button style="padding: 7px 10px; border-radius: 5px; color: black;">Click to know
+                                    more</button>
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="media_image">
+                    <a href="https://www.geospatialworld.net/news/instructors-from-indian-institute-of-drones-and-pioneer-flying-academy-successfully-complete-dgca-approved-rpas-trainer-course/" target="_blank">
+                        <img src="{% static 'img/news/geospatial-world-bloc (2).png' %}" class="img-fluid" width="80%" alt="Instructors from Indian Institute of Drones and Pioneer Flying Academy successfully complete
+                    DGCA approved RPAS Trainer Course">
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="media">
+            <div class="containerr">
+                <div class="mediaInfo">
+                    <div class="news_logo" style="width: 95%; padding-top: 30px;">
+                        <img src="{% static 'img/news/raksha.png' %}" width="100%" class="img-fluid" alt="Instructors from Indian Institute of Drones and Pioneer Flying Academy successfully complete DGCA approved RPAS Trainer Course">
+                    </div>
+                    <div class="box">
+                        <div class="text">
+                            <h3>
+                                IID, Pioneer Flying Academy Instructors Successfully Complete DGCA Approved RPAS Trainer Course
+                            </h3><br>
+                            <p>
+                                New Delhi. Instructors from Indian Institute of Drones (IID) and Pioneer Flying Academy underwent Remotely Piloted Aircraft System (RPAS) Trainer Course conducted by Indira Gandhi Rashtriya Uran Academi (IGRUA) in association with Directorate General
+                                of Civil Aviation (DGCA). <br>
+                                <span style="display: inline-block; margin-top: 10px;">March 12, 2021</span>
+                                <br><br>
+                                <a href="https://raksha-anirveda.com/iid-pioneer-flying-academy-instructors-successfully-complete-dgca-approved-rpas-trainer-course/" target="_blank" style="text-decoration: none;">
+                                    <button style="padding: 7px 10px; border-radius: 5px; color: black;">Click to know more</button>
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="media_image">
+                    <a href="https://raksha-anirveda.com/iid-pioneer-flying-academy-instructors-successfully-complete-dgca-approved-rpas-trainer-course/" target="_blank">
+                        <img src="{% static 'img/news/dronedestinaton.jpg' %}" width="80%" class="img-fluid" alt="IID, Pioneer Flying Academy Instructors Successfully Complete DGCA Approved RPAS Trainer
+                    Course">
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="media">
+            <div class="containerr">
+                <div class="mediaInfo">
+                    <div class="news_logo" style="width: 85%; padding-top: 30px;">
+                        <img src="{% static 'img/news/NewsBreak.png' %}" class="img-fluid" alt="Indian Institute of Drones – Guwahati, the gateway to a drone ecosystem in Northeast India.">
+                    </div>
+                    <div class="box">
+                        <div class="text">
+                            <h3>
+                                Indian Institute of Drones – Guwahati, the gateway to a drone ecosystem in Northeast India.
+                            </h3><br>
+                            <p>
+                                Guwahati: Indian Institute of Drones (IID) – Guwahati in association with Electronics Sector Skill Council of India inaugurated a first of its kind Centre for – drone pilot training and service & maintenance of drones on February 18, 2021, in Guwahati,
+                                Assam. <br>
+                                <span style="display: inline-block; margin-top: 10px;">February 22, 2021</span>
+                                <br><br>
+                                <a href="https://www.geospatialworld.net/news/instructors-from-indian-institute-of-drones-and-pioneer-flying-academy-successfully-complete-dgca-approved-rpas-trainer-course/" target="_blank" style="text-decoration: none;">
+                                    <button style="padding: 7px 10px; border-radius: 5px; color: black;">Click to know
+                                    more</button>
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="media_image">
+                    <a href="https://www.geospatialworld.net/news/instructors-from-indian-institute-of-drones-and-pioneer-flying-academy-successfully-complete-dgca-approved-rpas-trainer-course/" target="_blank">
+                        <img src="{% static 'img/news/NewsBreak.png' %}" width="80%" class="img-fluid" alt="Indian Institute of Drones – Guwahati, the gateway to a drone ecosystem in Northeast India.">
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="media">
+            <div class="containerr">
+                <div class="mediaInfo">
+                    <div class="news_logo" style="width: 45%; padding-top: 30px;">
+                        <img src="{% static 'img/news/Time8.png' %}" class="img-fluid" width="100%" alt="IID-Guwahati inaugurates training centre for Drone Pilots and Service.">
+                    </div>
+                    <div class="box">
+                        <div class="text">
+                            <h3>
+                                IID-Guwahati inaugurates training centre for Drone Pilots and Service.
+                            </h3><br>
+                            <p>
+                                Indian Institute of Drones – Guwahati will be instrumental in imparting skilled drone pilot training and knowledge on drone technology. <br>
+                                <span style="display: inline-block; margin-top: 10px;">February 22, 2021</span>
+                                <br><br>
+                                <a href="https://www.time8.in/iid-guwahati-inaugurates-training-centre-for-drone-pilots-and-service/" target="_blank" style="text-decoration: none;">
+                                    <button style="padding: 7px 10px; border-radius: 5px; color: black;">Click to know
+                                    more</button>
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="media_image">
+                    <a href="https://www.time8.in/iid-guwahati-inaugurates-training-centre-for-drone-pilots-and-service/" target="_blank">
+                        <img src="{% static 'img/news/news16.jpg' %}" class="img-fluid" width="80%" alt="IID-Guwahati inaugurates training centre for Drone Pilots and Service.">
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="media">
+            <div class="containerr">
+                <div class="mediaInfo">
+                    <div class="news_logo" style="width: 73%; padding-top: 30px;">
+                        <img src="{% static 'img/news/raksha.png' %}" width="100%" class="img-fluid" alt="Indian Institute of Drones – Guwahati, the Gateway to a Drone Ecosystem in Northeast India.">
+                    </div>
+                    <div class="box">
+                        <div class="text">
+                            <h3>
+                                Indian Institute of Drones – Guwahati, the Gateway to a Drone Ecosystem in Northeast India.
+                            </h3><br>
+                            <p>
+                                Indian Institute of Drones - Guwahati in association with Electronics Sector Skill Council of India inaugurated a first-of-its-kind Centre for Training of - Drone Pilots and Service & Maintenance in northeast India. <br>
+                                <span style="display: inline-block; margin-top: 10px;">February 22, 2021</span>
+                                <br><br>
+                                <a href="https://raksha-anirveda.com/indian-institute-of-drones-guwahati-the-gateway-to-a-drone-ecosystem-in-northeast-india/" target="_blank" style="text-decoration: none;">
+                                    <button style="padding: 7px 10px; border-radius: 5px; color: black;">Click to know more</button>
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="media_image">
+                    <a href="https://raksha-anirveda.com/indian-institute-of-drones-guwahati-the-gateway-to-a-drone-ecosystem-in-northeast-india/" target="_blank">
+                        <img src="{% static 'img/news/news17.png' %}" width="80%" class="img-fluid" alt="Indian Institute of Drones – Guwahati, the Gateway to a Drone Ecosystem in Northeast India.">
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="media">
+            <div class="containerr">
+                <div class="mediaInfo">
+                    <div class="news_logo" style="width: 67%; padding-top: 30px;">
+                        <img src="{% static 'img/news/varindia-logo.gif' %}" width="100%" class="img-fluid" alt="Indian Institute of Drones – Guwahati, the Gateway to a Drone Ecosystem in Northeast India.">
+                    </div>
+                    <div class="box">
+                        <div class="text">
+                            <h3>
+                                The gateway to a drone ecosystem in Northeast India.
+                            </h3><br>
+                            <p>
+                                Inaccessible population due to connectivity problem, shortage of medical personnel and lack of access to medical supplies are some of the major challenges Northeast is facing in present times. <br>
+                                <span style="display: inline-block; margin-top: 10px;">February 22, 2021</span>
+                                <br><br>
+                                <a href="https://www.varindia.com/news/the-gateway-to-a-drone-ecosystem-in-northeast-india" target="_blank" style="text-decoration: none;">
+                                    <button style="padding: 7px 10px; border-radius: 5px; color: black;">Click to know
+                                    more</button>
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="media_image">
+                    <a href="https://www.varindia.com/news/the-gateway-to-a-drone-ecosystem-in-northeast-india" target="_blank">
+                        <img src="{% static 'img/news/dron_ecosystem.jpg' %}" class="img-fluid" width="80%" alt="The gateway to a drone ecosystem in Northeast India.">
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="media">
+            <div class="containerr">
+                <div class="mediaInfo">
+                    <div class="news_logo" style="width: 67%; padding-top: 30px;">
+                        <img src="{% static 'img/news/businessline-logo.webp' %}" width="100%" class="img-fluid" alt="Indian Institute of Drones – Guwahati, the Gateway to a Drone Ecosystem in Northeast India.">
+                    </div>
+                    <div class="box">
+                        <div class="text">
+                            <h3>
+                                Indian Institute of Drones inaugurates Centre for Drone Pilot Training in Guwahati
+                            </h3><br>
+                            <p>
+                                The Indian Institute of Drones in association with the Electronics Sector Skill Council of India, has inaugurated a Centre for drone pilot training and service & maintenance of drones in Guwahati, Assam. <br>
+                                <span style="display: inline-block; margin-top: 10px;">February 22, 2021</span>
+                                <br><br>
+                                <a href="https://www.thehindubusinessline.com/news/national/indian-institute-of-drones-inaugurates-centre-for-drone-pilot-training-in-guwahati/article33901733.ece" target="_blank" style="text-decoration: none;">
+                                    <button style="padding: 7px 10px; border-radius: 5px; color: black;">Click to know
+                                    more</button>
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="media_image">
+                    <a href="https://www.thehindubusinessline.com/news/national/indian-institute-of-drones-inaugurates-centre-for-drone-pilot-training-in-guwahati/article33901733.ece" target="_blank">
+                        <img src="{% static 'img/news/drone_inaugurates.jpg' %}" width="80%" class="img-fluid" alt="Indian Institute of Drones inaugurates Centre for Drone Pilot Training in Guwahati">
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="media">
+            <div class="containerr">
+                <div class="mediaInfo">
+                    <div class="news_logo" style="width: 84%;">
+                        <img src="{% static 'img/news/sUAS-News.png' %}" class="img-fluid" alt="IID-Guwahati inaugurates training centre for Drone Pilots and Service">
+                    </div>
+                    <div class="box">
+                        <div class="text">
+                            <h3>
+                                IID-Guwahati inaugurates training centre for Drone Pilots and Service
+                            </h3><br>
+                            <p>
+                                Guwahati: Indian Institute of Drones (IID) – Guwahati in association with Electronics Sector Skill Council of India inaugurated a first of its kind Centre for – drone pilot training and service & maintenance of drones on February 18, 2021, in Guwahati,
+                                Assam. <br>
+                                <span style="display: inline-block; margin-top: 10px;">February 22, 2021</span>
+                                <br><br>
+                                <a href="https://www.suasnews.com/2021/02/indian-institute-of-drones-guwahati-the-gateway-to-a-drone-ecosystem-in-northeast-india/" target="_blank" style="text-decoration: none;">
+                                    <button style="padding: 7px 10px; border-radius: 5px; color: black;">Click to know
+                                    more</button>
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="media_image">
+                    <a href="https://www.suasnews.com/2021/02/indian-institute-of-drones-guwahati-the-gateway-to-a-drone-ecosystem-in-northeast-india/" target="_blank">
+                        <img src="{% static 'img/news/iid_guwahati.jpg' %}" class="img-fluid" width="80%" alt="IID-Guwahati inaugurates training centre for Drone Pilots and Service">
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="media">
+            <div class="containerr">
+                <div class="mediaInfo">
+                    <div class="news_logo" style="width: 97%;">
+                        <img src="{% static 'img/news/raksha.png' %}" class="img-fluid" alt="raksha-anirveda">
+                    </div>
+                    <div class="box">
+                        <div class="text">
+                            <h3>
+                                Indian defence unit procures multi rotor drones
+                            </h3><br>
+                            <p>
+                                Indian brands have been following Prime Minister Narendra Modi’s ‘vocal for local’ or localisation vision for a while now. Emphasising on a self-reliant, or ‘aatmanirbhar’, India, the government has asked that products not just be made in India, but also
+                                for the promotion of local brands, manufacturing, and supply chain. <br>
+                                <span style="display: inline-block; margin-top: 10px;">February 11, 2021</span>
+                                <br><br>
+                                <a href="https://raksha-anirveda.com/indian-defence-unit-procures-multi-rotor-drones-from-johnnette-technologies/" target="_blank" style="text-decoration: none;">
+                                    <button style="padding: 7px 10px; border-radius: 5px; color: black;">Click to know
+                                    more</button>
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="media_image">
+                    <a href="https://raksha-anirveda.com/indian-defence-unit-procures-multi-rotor-drones-from-johnnette-technologies/" target="_blank">
+                        <img src="{% static 'img/news/indian-army-copter.jpg' %}" width="80%" class="img-fluid" alt="Indian defence unit procures multi rotor drones">
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="media">
+            <div class="containerr">
+                <div class="mediaInfo">
+                    <div class="news_logo" style="width: 45%;">
+                        <img src="{% static 'img/news/indian_defence_news.png' %}" class="img-fluid" alt="indian defence news">
+                    </div>
+                    <div class="box">
+                        <div class="text">
+                            <h3>
+                                Indian defence unit procures multi rotor drones.
+                            </h3><br>
+                            <p>
+                                One of the Indian Defence units procures a few sets of multi rotor drones from Johnnette Technologies, an Indian Drone manufacturer. <br>
+                                <span style="display: inline-block; margin-top: 10px;">February 10, 2021</span>
+                                <br><br>
+                                <a href="http://www.indiandefensenews.in/2021/02/indian-defence-unit-procures-multi.html" target="_blank" style="text-decoration: none;">
+                                    <button style="padding: 7px 10px; border-radius: 5px; color: black;">Click to know
+                                    more</button>
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="media_image">
+                    <a href="http://www.indiandefensenews.in/2021/02/indian-defence-unit-procures-multi.html" target="_blank">
+                        <img src="{% static 'img/news/indian_defence_multi_rotor.jpg' %}" class="img-fluid" width="80%" alt="Indian defence unit procures multi rotor drones.">
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="media">
+            <div class="containerr">
+                <div class="mediaInfo">
+                    <div class="news_logo" style="width: 65%;  padding-top: 40px;">
+                        <img src="{% static 'img/news/nfa_post_news.png' %}" class="img-fluid" alt="nfa-post">
+                    </div>
+                    <div class="box">
+                        <div class="text">
+                            <h3>
+                                Indian Defence Unit Procures Multi Rotor Drones from Johnnette Technologies.
+                            </h3><br>
+                            <p>
+                                Johnnette Technologies has been following Prime Minister Narendra Modi’s ‘vocal for local’ or localisation vision for a while now. Also, it fuelled companies to work around multiple defence requirements. <br>
+                                <span style="display: inline-block; margin-top: 10px;">February 9, 2021</span>
+                                <br><br>
+                                <a href="https://thenfapost.com/2021/02/09/indian-defence-unit-procure-multi-rotor-drones-from-johnnette-technologies/" target="_blank" style="text-decoration: none;">
+                                    <button style="padding: 7px 10px; border-radius: 5px; color: black;">Click to know
+                                    more</button>
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="media_image">
+                    <a href="https://thenfapost.com/2021/02/09/indian-defence-unit-procure-multi-rotor-drones-from-johnnette-technologies/" target="_blank">
+                        <img src="{% static 'img/news/John Livingstone.jpg' %}" width="80%" class="img-fluid" alt="Indian Defence Unit Procures Multi Rotor Drones from Johnnette Technologies.">
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="media">
+            <div class="containerr">
+                <div class="mediaInfo">
+                    <div class="news_logo" style="width: 45%; padding-top: 40px;">
+                        <img src="{% static 'img/news/nfa_post_news.png' %}" class="img-fluid" alt="nfa-post">
+                    </div>
+                    <div class="box">
+                        <div class="text">
+                            <h3>
+                                Indian Defence Unit Procures Multi Rotor Drones from Johnnette Technologies.
+                            </h3><br>
+                            <p>
+                                One of the Indian Defence units procures a few sets of multi rotor drones from Johnnette Technologies, an Indian Drone manufacturer. <br> Johnnette Technologies has received 6 awards in the past 6 years. <br>
+                                <span style="display: inline-block; margin-top: 10px;">February 8, 2021</span>
+                                <br><br>
+                                <a href="https://dronetechuav.co.uk/indian-defence-unit-procures-multi-rotor-drones-drones-information/" target="_blank" style="text-decoration: none;">
+                                    <button style="padding: 7px 10px; border-radius: 5px; color: black;">Click to know
+                                    more</button>
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="media_image">
+                    <a href="https://dronetechuav.co.uk/indian-defence-unit-procures-multi-rotor-drones-drones-information/" target="_blank">
+                        <img src="{% static 'img/news/multi_rotor_drone.jpg' %}" class="img-fluid" width="80%" alt=" Indian Defence Unit Procures Multi Rotor Drones from Johnnette Technologies.">
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="media">
+            <div class="containerr">
+                <div class="mediaInfo">
+                    <div class="news_logo" style="width: 70%;">
+                        <img src="{% static 'img/news/sUAS-News.png' %}" class="img-fluid" alt="Indian Institute of Drones expands Franchisee Portfolior">
+                    </div>
+                    <div class="box">
+                        <div class="text">
+                            <h3>
+                                Indian Institute of Drones expands Franchisee Portfolio
+                            </h3><br>
+                            <p>
+                                With 3 Franchisee/Partner offices in India and 2 International Franchisee/Partner offices, Indian Institute of Drones, The No.1 Drone Pilot training Institute in India, adds 3 new Franchise offices to its Portfolio... <br>
+                                <span style="display: inline-block; margin-top: 10px;">Dated: 23 Nov 2020</span>
+                                <br><br>
+                                <a href="https://www.suasnews.com/2020/11/indian-institute-of-drones-expands-franchisee-portfolio/" target="_blank" style="text-decoration: none;">
+                                    <button style="padding: 7px 10px; border-radius: 5px; color: black;">Click to know
+                                    more</button>
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="media_image">
+                    <a href="https://www.suasnews.com/2020/11/indian-institute-of-drones-expands-franchisee-portfolio/" target="_blank">
+                        <img src="{% static 'img/news/IID-Training-scaled.jpg' %}" width="80%" class="img-fluid" alt="Indian Institute of Drones expands Franchisee Portfolio">
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="media">
+            <div class="containerr">
+                <div class="mediaInfo">
+                    <div class="news_logo" style="width: 60%;">
+                        <img src="{% static 'img/news/sUAS-News.png' %}" class="img-fluid" alt="Indian Institute of Drones launches Multi-Rotor Drone Engineering Course">
+                    </div>
+                    <div class="box">
+                        <div class="text">
+                            <h3>
+                                Indian Institute of Drones launches Multi-Rotor Drone Engineering Course
+                            </h3><br>
+                            <p>
+                                With an abrupt rise in demand for Drone Solutions and Services, Indian Institute of Drones has launched a brand new training program called Multi-Rotor Drone Engineering Course...
+                                <br>
+                                <span style="display: inline-block; margin-top: 10px;">Dated: 29 Nov 2020</span>
+                                <br><br>
+                                <a href="https://www.suasnews.com/2020/10/indian-institute-of-drones-launches-multi-rotor-drone-engineering-course/" target="_blank" style="text-decoration: none;">
+                                    <button style="padding: 7px 10px; border-radius: 5px; color: black;">Click to know more</button>
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="media_image">
+                    <a href="https://www.suasnews.com/2020/10/indian-institute-of-drones-launches-multi-rotor-drone-engineering-course/" target="_blank">
+                        <img src="{% static 'img/news/drone_engineering.png' %}" width="80%" class="img-fluid" alt="Indian Institute of Drones launches Multi-Rotor Drone Engineering Course">
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="media">
+            <div class="containerr">
+                <div class="mediaInfo">
+                    <div class="news_logo" style="width: 70%; padding-top: 40px;">
+                        <img src="{% static 'img/news/enterpreneur-logo.png' %}" width="100%" class="img-fluid" alt="enterpreneur india">
+                    </div>
+                    <div class="box">
+                        <div class="text">
+                            <h3>
+                                Usage Of Drone Technology In India: Changing Phases.
+                            </h3><br>
+                            <p>
+                                The Indian Institute of Drones powered by the government of India provides training to professionals in drone technology and gives them a platform to carryout UAV piloting and operations with emphasis on safety and security issues... <br>
+                                <span style="display: inline-block; margin-top: 10px;">Dated: 14 Sep 2020</span>
+                                <br><br>
+                                <a href="https://www.entrepreneur.com/article/356135" target="_blank" style="text-decoration: none;">
+                                    <button style="padding: 7px 10px; border-radius: 5px; color: black;">Click to know more</button>
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="media_image">
+                    <a href="https://www.entrepreneur.com/article/356135" target="_blank">
+                        <img src="{% static 'img/news/dron_ecosystem.jpg' %}" width="80%" class="img-fluid" alt="Usage Of Drone Technology In India: Changing Phases.">
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="media">
+            <div class="containerr">
+                <div class="mediaInfo">
+                    <div class="news_logo" style="width: 80%; padding-top: 40px;">
+                        <img src="{% static 'img/news/aim-logo.png' %}" width="100%" class="img-fluid" alt="analyticsindiamag">
+                    </div>
+                    <div class="box">
+                        <div class="text">
+                            <h3>
+                                AI & ML Can Open Up Space For Drones To Demonstrate Full Potential: Karthik Shankaran, CIO, DEP.
+                            </h3><br>
+                            <p>
+                                These courses will provide hands-on training on UAVs / drones, fundamentals of drone data processing, understanding federal policies on drone flying etc. Currently, there aren’t many qualified drone institutes in India, apart from Indian Institute of
+                                Drones.....
+                                <br>
+                                <span style="display: inline-block; margin-top: 10px;">Dated: 09 Sep 2020</span>
+                                <br><br>
+                                <a href="https://analyticsindiamag.com/ai-ml-can-open-up-space-for-drones-to-demonstrate-full-potential-karthik-shankaran-cio-dep/" target="_blank" style="text-decoration: none;">
+                                    <button style="padding: 7px 10px; border-radius: 5px; color: black;">Click to know more</button>
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="media_image">
+                    <a href="https://analyticsindiamag.com/ai-ml-can-open-up-space-for-drones-to-demonstrate-full-potential-karthik-shankaran-cio-dep/" target="_blank">
+                        <img src="{% static 'img/news/ai_and_ml.jpg' %}" width="78%" class="img-fluid" alt="AI & ML Can Open Up Space For Drones To Demonstrate Full Potential: Karthik Shankaran, CIO,
+                    DEP.">
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="media">
+            <div class="containerr">
+                <div class="mediaInfo">
+                    <div class="news_logo" style="width: 80%; padding-top: 40px;">
+                        <img src="{% static 'img/news/cision-logo.png' %}" width="100%" class="img-fluid" alt="prnewswire">
+                    </div>
+                    <div class="box">
+                        <div class="text">
+                            <h3>
+                                Commercial Drone Market in India 2020-2026: Profiles of Key Companies.
+                            </h3><br>
+                            <p>
+                                India's commercial drone market witnessed substantial growth in the past few years on account of increasing awareness, technological advancement, and growing adoption across several verticals such as mining, filming & photography, and agriculture in the
+                                country. ..... <br>
+                                <span style="display: inline-block; margin-top: 10px;">Dated: 01 Sep 2020</span>
+                                <br><br>
+                                <a href="https://www.prnewswire.com/news-releases/commercial-drone-market-in-india-2020-2026-profiles-of-key-companies-including-aarav-unmanned-systems-pvt-ltd-asteria-aerospace-pvt-ltd-edall-systems-and-more-301121965.html" target="_blank" style="text-decoration: none;">
+                                    <button style="padding: 7px 10px; border-radius: 5px; color: black;">Click to know
+                                        more</button>
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="media_image">
+                    <a href="https://www.prnewswire.com/news-releases/commercial-drone-market-in-india-2020-2026-profiles-of-key-companies-including-aarav-unmanned-systems-pvt-ltd-asteria-aerospace-pvt-ltd-edall-systems-and-more-301121965.html" target="_blank">
+                        <img src="{% static 'img/news/commercial_drone_market.png' %}" width="80%" class="img-fluid" alt="Commercial Drone Market in India 2020-2026: Profiles of Key Companies.">
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="media">
+            <div class="containerr">
+                <div class="mediaInfo">
+                    <div class="news_logo" style="width: 37%; padding-top: 40px;">
+                        <img src="{% static 'img/news/Business-Wire.png' %}" width="100%" class="img-fluid" alt="businesswire.com">
+                    </div>
+                    <div class="box">
+                        <div class="text">
+                            <h3>
+                                India Commercial Drone Market Outlook to 2026: Market Forecast.
+                            </h3><br>
+                            <p>
+                                According to this research, India's commercial drone market is projected to grow at a CAGR of 12.4% during 2020-2026......
+                                <br>
+                                <span style="display: inline-block; margin-top: 10px;">Dated: 28 Aug 2020</span>
+                                <br><br>
+                                <a href="https://www.businesswire.com/news/home/20200828005147/en/India-Commercial-Drone-Market-Outlook-to-2026-Market-Forecast-by-Types-by-Applications-by-Regions-and-Competitive-Landscape---ResearchAndMarkets.com" target="_blank" style="text-decoration: none;">
+                                    <button style="padding: 7px 10px; border-radius: 5px; color: black;">Click to know
+                                    more</button>
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="media_image">
+                    <a href="https://www.businesswire.com/news/home/20200828005147/en/India-Commercial-Drone-Market-Outlook-to-2026-Market-Forecast-by-Types-by-Applications-by-Regions-and-Competitive-Landscape---ResearchAndMarkets.com" target="_blank">
+                        <img src="{% static 'img/news/Business-Wire.png' %}" width="80%" class="img-fluid" alt="India Commercial Drone Market Outlook to 2026: Market Forecast.">
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="media">
+            <div class="containerr">
+                <div class="mediaInfo">
+                    <div class="news_logo" style="width: 60%; padding-top: 40px;">
+                        <img src="{% static 'img/news/sUAS-News.png' %}" width="100%" class="img-fluid" alt="suasnews.com">
+                    </div>
+                    <div class="box">
+                        <div class="text">
+                            <h3>
+                                RPAS 2020 – India
+                            </h3><br>
+                            <p>
+                                The Indian Institute of Drones (IID), International Foundation for Aviation, Aerospace & Drones (IFFAAD) and India International Center (IIC) had organized a National Conference by the name of RPAS 2020......<br>
+                                <span style="display: inline-block; margin-top: 10px;">Dated: 12 Feb 2020</span>
+                                <br><br>
+                                <a href="https://www.suasnews.com/2020/02/rpas-2020-india/" target="_blank" style="text-decoration: none;">
+                                    <button style="padding: 7px 10px; border-radius: 5px; color: black;">Click to know
+                                    more</button>
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="media_image">
+                    <a href="https://www.suasnews.com/2020/02/rpas-2020-india/" target="_blank">
+                        <img src="{% static 'img/news/RPAS.jpg' %}" width="80%" class="img-fluid" alt=" RPAS 2020 – India">
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="media">
+            <div class="containerr">
+                <div class="mediaInfo">
+                    <div class="news_logo" style="width: 65%; padding-top: 40px;">
+                        <img src="{% static 'img/news/the-print-logo.webp' %}" width="100%" class="img-fluid" alt="theprint.in">
+                    </div>
+                    <div class="box">
+                        <div class="text">
+                            <h3>
+                                By flying drones ‘illegally’, UP, Delhi & Punjab police are breaking the law to enforce law.
+                            </h3><br>
+                            <p>
+                                It is illegal to fly drones in India that do not have the DGCA’s NPNT software, said Lt. Cdr. John Livingstone (retd), a former Indian Navy officer and founder of Noida-based drone-making company Johnnette Technologies.......
+                                <br>
+                                <span style="display: inline-block; margin-top: 10px;">Dated: 22 Jan 2020</span>
+                                <br><br>
+                                <a href="https://theprint.in/india/by-flying-drones-illegally-up-delhi-punjab-police-are-breaking-the-law-to-enforce-law/352484/" target="_blank" style="text-decoration: none;">
+                                    <button style="padding: 7px 10px; border-radius: 5px; color: black;">Click to know more</button>
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="media_image">
+                    <a href="https://theprint.in/india/by-flying-drones-illegally-up-delhi-punjab-police-are-breaking-the-law-to-enforce-law/352484/" target="_blank">
+                        <img src="{% static 'img/news/theprint_socialme.png' %}" width="80%" class="img-fluid" alt="By flying drones ‘illegally’, UP, Delhi & Punjab police are breaking the law to enforce law.">
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="media">
+            <div class="containerr">
+                <div class="mediaInfo">
+                    <div class="news_logo" style="width: 45%; padding-top: 40px;">
+                        <img src="{% static 'img/news/sUAS-News.png' %}" width="100%" class="img-fluid" alt="suasnews.com">
+                    </div>
+                    <div class="box">
+                        <div class="text">
+                            <h3>
+                                MoU inked between Turbo Jet Engines (Hyderabad) Private Limited – Johnnette Technologies Private Limited.
+                            </h3><br>
+                            <p>
+                                Johnnette Technologies Private Limited inks MoU with Turbo Jet Engines (Hyderabad) Private Limited in New Delhi on 9 th August, 2019........<br>
+                                <span style="display: inline-block; margin-top: 10px;">Dated: 13 Aug 2019</span>
+                                <br><br>
+                                <a href="https://www.suasnews.com/2019/08/mou-inked-between-turbo-jet-engines-hyderabad-private-limited-johnnette-technologies-private-limited/" target="_blank" style="text-decoration: none;">
+                                    <button style="padding: 7px 10px; border-radius: 5px; color: black;">Click to know more</button>
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="media_image">
+                    <a href="https://www.suasnews.com/2019/08/mou-inked-between-turbo-jet-engines-hyderabad-private-limited-johnnette-technologies-private-limited/" target="_blank">
+                        <img src="{% static 'img/news/Jonette-PR-Pic.jpg' %}" width="80%" class="img-fluid" alt="MoU inked between Turbo Jet Engines (Hyderabad) Private Limited – Johnnette Technologies
+                    Private Limited.">
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="media">
+            <div class="containerr">
+                <div class="mediaInfo">
+                    <div class="news_logo" style="width: 45%; padding-top: 40px;">
+                        <img src="{% static 'img/news/sUAS-News.png' %}" width="100%" class="img-fluid" alt="uasnews.com">
+                    </div>
+                    <div class="box">
+                        <div class="text">
+                            <h3>
+                                Indian Institute of Drones Awareness Campaign on Drone Technologies, at NCC Air-Wing.
+                            </h3><br>
+                            <p>
+                                The Indian Institute of Drones has organized an Awareness Campaign on Drone Technologies, on 22nd July 2019 at NCC Air Wing........
+                                <br>
+                                <span style="display: inline-block; margin-top: 10px;">Dated: 29 Jul 2019</span>
+                                <br><br>
+                                <a href="https://www.suasnews.com/2019/07/indian-institute-of-drones-awareness-campaign-on-drone-technologies-at-ncc-air-wing/" target="_blank" style="text-decoration: none;">
+                                    <button style="padding: 7px 10px; border-radius: 5px; color: black;">Click to know
+                                    more</button>
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="media_image">
+                    <a href="https://www.suasnews.com/2019/07/indian-institute-of-drones-awareness-campaign-on-drone-technologies-at-ncc-air-wing/" target="_blank">
+                        <img src="{% static 'img/news/Lt-Cdr-John-Livingstone-Retd.-addressing-the-audience.jpeg' %}" width="80%" class="img-fluid" alt="Indian Institute of Drones Awareness Campaign on Drone Technologies, at NCC Air-Wing.">
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="media">
+            <div class="containerr">
+                <div class="mediaInfo">
+                    <div class="news_logo" style="width: 80%; padding-top: 40px;">
+                        <img src="{% static 'img/news/wb-disrupt-logo.png' %}" width="100%" class="img-fluid" alt="http://bwdisrupt.businessworld.in/">
+                    </div>
+                    <div class="box">
+                        <div class="text">
+                            <h3>
+                                How to Tame Your Drone: 7 Tips to Fly a Drone and Not Kill Anyone.
+                            </h3><br>
+                            <p>
+                                “That’s why we have people from Colombia, Bangladesh, and some students even from Zimbabwe. India is known for low-cost high quality drone training,” said Founder CEO of Johnnette Technologies, Lt Cdr John Livingstone.........<br>
+                                <span style="display: inline-block; margin-top: 10px;">Dated: 29 Jul 2019</span>
+                                <br><br>
+                                <a href="http://bwdisrupt.businessworld.in/article/How-to-Tame-Your-Drone-7-Tips-to-Fly-a-Drone-and-Not-Kill-Anyone/29-06-2017-121107/" target="_blank" style="text-decoration: none;">
+                                    <button style="padding: 7px 10px; border-radius: 5px; color: black;">Click to know more</button>
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="media_image">
+                    <a href="http://bwdisrupt.businessworld.in/article/How-to-Tame-Your-Drone-7-Tips-to-Fly-a-Drone-and-Not-Kill-Anyone/29-06-2017-121107/" target="_blank">
+                        <img src="{% static 'img/news/AJ_drone_flying.jpg' %}" width="80%" class="img-fluid" alt="How to Tame Your Drone: 7 Tips to Fly a Drone and Not Kill Anyone.">
+                    </a>
+                </div>
+            </div>
+        </section>
+        <!--==========X========== main content ============X========-->
+        <br>
+    </div>
+{% endblock content %}
+
+
+
+{% block page_js %}
+{% endblock page_js %}
