@@ -1,0 +1,117 @@
+{% extends 'app/base.html' %} {% load static %} {% block title %}Product Details{% endblock title %} {% block page_css %}
+<!-- Link Swiper's CSS -->
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+<!--Custom CSS-->
+<link rel="stylesheet" href="{% static 'app/css/product_detail.css' %}"> {% endblock page_css %} 
+{% block content %}
+
+<div class="container my-5">
+    <div class="row">
+        <div class="col-sm-5 text-center">
+
+            <!-- prodict images  -->
+            <div class="container">
+                <!-- Swiper -->
+                <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper mySwiper2">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="{{ product.img.url }}" class="img-thumbnail" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="{{ product.img2.url }}" class="img-thumbnail" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="{{ product.img3.url }}" class="img-thumbnail" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="{{ product.img4.url }}" class="img-thumbnail" />
+                        </div>
+                    </div>
+                </div>
+                <div thumbsSlider="" class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="{{ product.img.url }}" class="img-thumbnail" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="{{ product.img2.url }}" class="img-thumbnail" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="{{ product.img3.url }}" class="img-thumbnail" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="{{ product.img4.url }}" class="img-thumbnail" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- product details -->
+        <div class="col-sm-6 offset-sm-1">
+            <div class="right-side">
+                <p class="product_discription">{{ product.product_discription }}</p>
+                <hr>
+                <div class="detail">
+                    <div class="brand_name">{{ product.brand_name }}</div>
+                    <div class="product_title">{{ product.product_title }}</div>
+                    <div class="company_logo"><img src="{% static 'app/images/logo/nlogo3.png' %}" style="box-shadow: none;" alt=""></div>
+                    <div class="product_price">
+                        <span class="selling_price"><strong><span>&#8377;</span>{{ product.selling_price }}</strong>
+                        </span> &nbsp;
+                        <span class="actual_price"><strike><span>&#8377;</span>{{ product.actual_price }}</strike>
+                        </span> &nbsp;
+                        <span class="off_upto"><strong>{{ product.Calculate_Offer }}<span>% off</span></strong>
+                        </span>
+                    </div>
+                    <div class="deal"><strong>Deal of The Day</strong></div>
+                    <br>
+                    <div class="color_and_size">
+                        <form action="POST">
+                            <span style="font-size: 15px; font-weight: bold;">Color :</span> &nbsp;
+                            <input class="form-check-input" type="radio" name="color" id="brown" value="brown">
+                            <label for="brown">Brown</label> &nbsp;
+                            <input class="form-check-input" type="radio" name="color" id="black" value="black">
+                            <label for="black">Black</label>
+
+                            <br> <br>
+
+                            <span style="font-size: 15px; font-weight: bold;">Size :</span> &nbsp; &nbsp;
+                            <input class="form-check-input" type="radio" name="size" id="7" value="7">
+                            <label for="7">7</label> &nbsp;
+
+                            <input class="form-check-input" type="radio" name="size" id="8" value="8">
+                            <label for="8">8</label> &nbsp;
+
+                            <input class="form-check-input" type="radio" name="size" id="9" value="9">
+                            <label for="9">9</label>
+                        </form>
+                    </div>
+                </div>
+                <br><br>
+            </div>
+            <div class="available_offers">
+                <a href="{% url 'add-to-cart' %}" class="btn btn-primary shadow px-5 py-2">Add to Cart</a>
+                <a href="{% url 'buy-now' %}" class="btn btn-danger shadow px-5 py-2 ms-4">Buy Now</a>
+                <h5 class="mt-5">Available Offers</h5>
+                <ul>
+                    <li>Bank Offer 5% Unlimited Cashback on Flipkart Axis Bank Credit</li>
+                    <li>Special Price Get extra ₹3000 off (price inclusive of discount)</li>
+                    <li>No cost EMI ₹1,667/month. Standard EMI also available</li>
+                    <li>Partner Offer ₹2000 Flipkart Gift Card on Every 1000th Transaction with a new Visa Debit/Credit Card
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+</div>
+{% endblock content %} 
+{% block page_js %}
+<!-- Swiper JS -->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+<!-- custom js files -->
+<script src="{% static 'app/js/product_detail.js' %}"></script>
+
+{% endblock page_js %}

@@ -1,0 +1,243 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'D-DIN', sans-serif;
+}
+
+.head_banner {
+    width: 100%;
+    height: 90vh;
+    /* height: 0vh; */
+}
+
+.head_banner .background_img {
+    height: 100%;
+    width: 100%;
+    background-image: url(../img/contact/contact2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.banner_text {
+    position: absolute;
+    width: 100%;
+    top: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner_text h1 {
+    font-weight: 700;
+    font-size: 90px;
+    color: white;
+    text-shadow: 2px 2px black;
+    text-transform: uppercase;
+    text-align: center;
+    background-color: rgba(14, 13, 13, 0.5);
+}
+
+@media screen and (max-width: 1300px) and (min-width: 900px){
+    .head_banner {
+        width: 100%;
+        height: 50vh;
+    }
+
+    .banner_text h1 {
+        font-weight: 700;
+        font-size: 40px;
+    }
+}
+@media screen and (max-width: 900px) {
+    .head_banner {
+        width: 100%;
+        height: 30vh;
+    }
+
+    .banner_text h1 {
+        font-weight: 700;
+        font-size: 40px;
+    }
+}
+
+/* ===============---------------================= */
+.contact {
+    position: relative;
+    min-height: 100vh;
+    padding: 50px 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* background-image: url(img/contact/contact_img1.jpg); */
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.contact .content {
+    max-width: 800px;
+    text-align: center;
+    color: #fff;
+}
+
+.contact .content h2 {
+    font-size: 46px;
+    font-weight: 500;
+    color: white;
+}
+
+.contact .content p {
+    font-size: 20px;
+    /* font-weight: 500; */
+    color: white;
+}
+
+.containerr {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.containerr .contactInfo {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+.containerr .contactInfo .box {
+    position: relative;
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+}
+
+.containerr .contactInfo .box .icon {
+    min-width: 60px;
+    height: 60px;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-size: 22px;
+    color: black;
+}
+.containerr .contactInfo .box .text {
+    display: flex;
+    margin-left: 20px;
+    font-size: 16px;
+    color: #fff;
+    flex-direction: column;
+    font-weight: 300;
+}
+.containerr .contactInfo .box .text h3{
+    font-weight: 500;
+    font-size: 23px;
+/*     color: #00bcd4; */
+    color: white;
+}
+.contactForm{
+    width: 40%;
+    padding: 40px;
+    background: #fff;
+}
+.contactForm h2{
+    font-size: 30px;
+    color: #333;
+    font-weight: 500;
+    /* padding-bottom: 50px; */
+    padding-bottom: 20px;
+}
+.contactForm .inputBox{
+    position: relative;
+    width: 100%;
+    margin-top: 10px;
+}
+.contactForm .inputBox input,
+.contactForm .inputBox textarea {
+    width: 100%;
+    padding: 5px 0;
+    font-size: 18px;
+    margin: 10px 0;
+    border: none;
+    border-bottom: 2px solid #333;
+    outline: none;
+    resize: none;
+}
+.contactForm .inputBox span {
+    position: absolute;
+    left: 0;
+    padding: 5px 0;
+    font-size: 18px;
+    margin: 10px 0;
+    pointer-events: none;
+    transition: 0.5s;
+    color: #666;
+}
+.contactForm .inputBox input:focus ~ span,
+.contactForm .inputBox input:valid ~ span,
+.contactForm .inputBox textarea:focus ~ span,
+.contactForm .inputBox textarea:valid ~ span {
+    color: #e91e63;
+    font-size: 12px;
+    transform: translateY(-20px);
+}
+/* .contactForm .inputBox input[type="submit"]{
+    width: 100%;
+    background-color: #00bcd4;
+    background-color: black;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 18px;
+} */
+.input-button{
+    width: 100%; 
+    text-align: left; 
+    margin: 10px 0;
+}
+#my-form-button{
+    background-color: black; 
+    color: white; 
+    padding: 10px 35px; 
+    border-radius: 5px;
+}
+#my-form-status{
+    color: #e91e63; 
+    padding-top: 10px;
+}
+@media screen and (max-width: 1300px) {
+    .contact{
+        padding: 20px;
+    }
+} 
+
+@media screen and (max-width: 991px) {
+    .contact{
+        padding: 50px;
+    }
+    .containerr{
+        flex-direction: column;
+    }
+    .containerr .contactInfo{
+        margin-bottom: 40px;
+        width: 100%;
+    }
+    .contactForm{
+        width: 100%;
+    }
+    .containerr .contactInfo,
+    .containerr .contactForm{
+        width: 100%;
+    }
+} 
+@media screen and (max-width: 450px) {
+    .contact{
+        padding: 20px;
+    }
+} 

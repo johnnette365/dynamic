@@ -1,0 +1,42 @@
+{% extends 'app/base.html' %}
+{% load crispy_forms_tags %}
+{% load static %}
+{% block title %}Registration{% endblock title %}
+
+{% block page_css %}
+
+{% endblock page_css %}
+
+
+{% block content %}
+<span style="position: static; display: inline-block; height: 100px;" class="balance"></span> 
+<div class="col-sm-3" style="position: fixed; right: 15px; z-index: 10; text-align: center;">
+    {% if messages %} {% for message in messages %}
+    <div {% if messages %} class="alert alert-{{ message.tags }}" {% endif %} role="alert" style="font-family: 'Times New Roman', Times, serif;">{{ message }} {{ user.first_name }} </div>
+    {% endfor %} {% endif %}
+</div>
+<div class="container my-3">
+    <div class="row">
+        <div class="col-sm-6 offset-sm-3">
+            <div style="background-color: white; border-radius: 5px;">
+                <h3 style="font-weight: bold; padding: 15px 0 0 25px;">Customer Registration</h3>
+                <hr>
+                <form method="POST" class="shadow p-5" style="font-size: 17px; font-weight: normal!important;">
+                    {% csrf_token %}
+                    {{ signup | crispy }}
+                    <div class="text-end mt-3">
+                        <button type="submit" class="btn btn-danger">Submit</button>
+                    </div>
+                    <br>
+                    <div class="text-center text-primary fw-bold"> <small>Existing User ? <a href="{% url 'login' %}" class="text-danger">Login Now</a></small></div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<br><br>
+{% endblock content %}
+
+
+{% block page_js %}
+{% endblock page_js %}

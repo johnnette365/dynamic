@@ -1,0 +1,80 @@
+{% extends 'app/base.html' %} 
+{% load static %} 
+{% block title %}Addresses{% endblock title %} 
+
+
+{% block page_css %}
+<style>
+    .card-body {
+        text-align: left;
+    }
+    
+    .card-body p {
+        margin: 5px;
+    }
+    
+    .card-body hr {
+        margin-top: 5px;
+        margin-bottom: 7px;
+    }
+</style>
+{% endblock page_css %} 
+
+
+
+{% block content %}
+<span style="position: static; display: inline-block; height: 100px;" class="balance"></span> 
+    <div class="container mt-5">
+        <div class="row">
+            <!-- <h4 style="color: white!important; text-align: center;">Welcome <span class="text-capitalize">{{ user.first_name }}</span></h4> -->
+            <div class="col-sm-2 border-end">
+                <h4 style="color: white!important; text-align: center;">Welcome <span class="text-capitalize">{{ user.first_name }}</span></h4>
+                <hr>
+                <ul class="list-unstyled">
+                    <li class="d-grid mt-2"><a href="{% url 'profile' %}" class="btn btn-secondary">Profile</a></li>
+                    <li class="d-grid mt-2"><a href="{% url 'address' %}" class="btn btn-primary">Address</a></li>
+                    <li class="d-grid mt-2"><a href="{% url 'orders' %}" class="btn btn-secondary">Orders</a></li>
+                    <li class="d-grid mt-2"><a href="{% url 'changepassword' %}" class="btn btn-secondary">Password</a></li>
+                    <li class="d-grid mt-2"><a href="{% url 'logout' %}" class="btn btn-danger">Logout</a></li>
+                </ul>
+            </div>
+            <div class="col-sm-10">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="row">
+                            {% if address %}
+                                {% for add in address %}
+                                    <div class="col-sm-4 mb-4">
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <h5>Address: {{ forloop.counter }}</h5>
+                                                <hr>
+                                                <p><span>{{ add.full_name }}</span>, <span> {{ add.address1 }} </span></span>, <span> {{ add.address2 }} </span>(<span>{{ add.landmark }}</span>)<span></span></p>
+                                                <p></p>
+                                                <p>Mobile No: &nbsp; {{ add.mobile_number }}</p>
+                                                <p>{{ add.city }} <span>,</span> {{add.get_state_display }}<span>,</span> {{add.pincode }} <span>(</span>{{add.locality }}<span>)</span></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                {% endfor %}
+                            {% else %}
+                                <div class="col-sm-12 mb-4">
+                                    <div class="">
+                                        <div class="card-body">
+                                            <h5 style="color: red; font-size: 21px;">No Address Found</h5>
+                                            <div style="text-align: center; background-color black!important;">
+                                                <img class="mb-2" src="{% static 'app/images/logo/address.gif' %}"  style="opacity: .8;" alt=""> 
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br><br>
+
+{% endblock content %} {% block page_js %} {% endblock page_js %}

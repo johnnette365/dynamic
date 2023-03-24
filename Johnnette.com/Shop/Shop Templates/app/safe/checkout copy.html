@@ -1,0 +1,168 @@
+{% extends 'app/base.html' %} {% load static %} {% block title %}Buy Now{% endblock title %} {% block page_css %}
+<style>
+    .detail {
+        padding-left: 10px;
+        box-sizing: border-box;
+        overflow: hidden;
+    }
+    
+    .detail>div {
+        margin-top: 5px;
+    }
+    
+    .company_logo img {
+        display: flex;
+        width: 100%;
+    }
+    
+    .brand_name {
+        font-weight: bold;
+    }
+</style>
+{% endblock page_css %} {% block content %}
+<span style="position: static; display: inline-block; height: 200px;" class="balance"></span>
+<div class="container">
+    <div class="row mt-5">
+        <div class="col-sm-6 mb-3">
+            <div style="background-color: white; padding: 15px 15px 15px 15px; border-radius: 5px;">
+                <h4>Order Summary</h4>
+                <hr> {% for items in cart_items %}
+                <div class="card mb-2 pt-3 pb-3 pl-4" style="padding-left: 20px;">
+                    <h5>Product: {{ forloop.counter }}</h5>
+                    <div class="detail">
+                        <div class="brand_name">{{ items.product.brand_name }}</div>
+                        <div class="product_title">{{ items.product.product_title }}</div>
+                        <div class="product_price">
+                            <p>Quantity: &nbsp; {{ items.quantity}} </p>
+                            <span class="selling_price"><strong>Price: &nbsp;<span>&#8377;</span>{{ items.total_cost }}</strong>
+                            </span> &nbsp;
+                        </div>
+                    </div>
+                </div>
+                <p>Total Cost + Rs. 70 = {{ totalamount }} </p>
+                {% endfor %}
+            </div>
+            <br>
+            <small style="color: white;"><strong style="color: gray;">Term and Condition:</strong> &nbsp; Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, ullam saepe! Iure optio repellat dolor velit, minus rem. Facilis cumque neque numquam laboriosam, accusantium adipisci nisi nihil in et quis?</small>
+        </div>
+        <div class="col-sm-4 offset-sm-1">
+            <div style="background-color: white; padding: 15px 15px 15px 15px; border-radius: 5px;">
+                <h4>Select Shipping Address</h4>
+                <hr>
+                <form action="/paymentdone" id="payment-form">
+                    <!-- address -->
+                    {% for add in add %}
+                    <div class="card">
+                        <div class="card-body">
+                            <h5>{{ add.full_name }}</h5>
+                            <p>{{ add.locality }}, {{ add.city }}, {{ add.state }} - {{ add.pincode }}</p>
+                        </div>
+                    </div>
+                    <div class="form-check mt-2 mb-2">
+                        <input class="form-check-input" type="radio" name="custid" id="custadd{{forloop.counter}}" value="{{add.id}}" required>
+                        <label for="custadd{{forloop.counter}}" class="form-check-label fw-bold">Address: {{ forloop.counter }}</label>
+                        <button id="rzp-button1" type="submit" class="btn btn-warning mt-3 px-5 fw-bold">Countinue</button>
+                    </div>
+                    {% endfor %}
+                    <div class="text-end">
+                    </div>
+                </form>
+                {% comment %} <form action="/paymentdone" id="payment-form">
+                    <!-- address -->
+                    {% for add in add %}
+                    <div class="card">
+                        <div class="card-body">
+                            <h5>{{ add.full_name }}</h5>
+                            <p>{{ add.locality }}, {{ add.city }}, {{ add.state }} - {{ add.pincode }}</p>
+                        </div>
+                    </div>
+                    <div class="form-check mt-2 mb-2">
+                        <input class="form-check-input" type="radio" name="custid" id="custadd{{forloop.counter}}" value="{{add.id}}" required>
+                        <label for="custadd{{forloop.counter}}" class="form-check-label fw-bold">Address: {{ forloop.counter }}</label>
+                    </div>
+                    {% endfor %}
+                    <div class="text-end">
+                        <button id="rzp-button1" type="submit" class="btn btn-warning mt-3 px-5 fw-bold">Countinue</button>
+                    </div>
+                </form> {% endcomment %}
+            </div>
+        </div>
+    </div>
+</div>
+<br><br>
+
+
+<!-- <h1>paytm merchant payment page</h1>
+<form action="https://securegw-stage.paytm.in/theia/processTransaction" method="post" name="paytm">
+    {% for key, value in param_dict.items %}
+    <input type="hidden" name="{{key}}" value="{{value}}"> {% endfor %}
+</form>
+
+<script>
+    document.paytm.submit()
+</script> -->
+
+
+
+
+
+
+{% endblock content %} 
+
+
+{% block page_js %} 
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+    <script>
+        var options = {
+            "key": "rzp_test_qg6vjrkp4rXSOI", // Enter the Key ID generated from the Dashboard
+            "amount": "{{payment.amount}}", // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
+            "currency": "INR",
+            "name": "Johnnette Technologies",
+            "description": "Test Transaction",
+            "image": "https://example.com/your_logo",
+            "order_id": "{{payment.id}}", //This is a sample Order ID. Pass the `id` obtained in the response of Step 1
+            "handler": function (response){
+
+                window.location.href='http://127.0.0.1:8000/paymentdone/?razorpay_payment_id=${response.razorpay_payment_id}&razorpay_order_id=${response.razorpay_order_id}&razorpay_signature=${response.razorpay_signature}'
+
+                alert("razorpay_payment_id ===" + response.razorpay_payment_id);
+                alert("razorpay_order_id ===" + response.razorpay_order_id);
+                alert("razorpay_signature ===" + response.razorpay_signature);
+
+                //if(amount_paid != 0){
+                //    document.getElementById('payment-form').submit();
+                //}
+                document.getElementById('payment-form').submit();
+                
+                //console.log(amount_paid)
+                
+            },
+            //"callback_url":"{{callback_url}}"
+            "prefill": {
+                "name": "Gaurav Kumar",
+                "email": "gaurav.kumar@example.com",
+                "contact": "9000090000"
+            },
+            "notes": {
+                "address": "Razorpay Corporate Office"
+            },
+            "theme": {
+                "color": "#3399cc"
+            }
+        };
+        var rzp1 = new Razorpay(options);
+        rzp1.on('payment.failed', function (response){
+                alert(response.error.code);
+                alert(response.error.description);
+                alert(response.error.source);
+                alert(response.error.step);
+                alert(response.error.reason);
+                alert(response.error.metadata.order_id);
+                alert(response.error.metadata.payment_id);
+        });
+        document.getElementById('rzp-button1').onclick = function(e){
+            rzp1.open();
+            e.preventDefault();
+        }
+    </script>
+{% endblock page_js %}
